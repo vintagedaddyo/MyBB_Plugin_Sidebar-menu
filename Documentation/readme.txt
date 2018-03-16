@@ -11,3 +11,11 @@ Installation :
 /////////////////////////////////////////////////
 
 Basic update to version 1.1 for 1.8.x usage by: Vintagedaddyo
+
+Basic update to version 1.2 for 1.8.x usage by: Vintagedaddyo
+* Further localization support:
+- English
+- EnglishGB
+- Espanol
+- French
+- Italiano
