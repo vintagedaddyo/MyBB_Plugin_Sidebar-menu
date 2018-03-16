@@ -8,7 +8,7 @@
  *
  * MyBB Version: 1.8
  *
- * Plugin Version: 1.1
+ * Plugin Version: 1.2
  * 
  */
 
@@ -18,8 +18,15 @@ if(!defined("IN_MYBB"))
 {
     die("Direct initialization of this file is not allowed.<br /><br />Please make sure IN_MYBB is defined.");
 }
- 
-$plugins->add_hook("index_start","sidemenu"); 
+
+// Load on Index
+//$plugins->add_hook("index_start","sidemenu");
+
+// Load on Portal 
+//$plugins->add_hook("portal_start","sidemenu"); 
+
+// Load Globally
+$plugins->add_hook("global_start","sidemenu"); 
  
 function sidemenu_info()
 {
@@ -54,18 +61,18 @@ function sidemenu_activate()
 	// Settings
     
     $sidemenu_group = array(
-        "gid" => "NULL",
+        "gid" => "0",
         "name" => $lang->sidemenu_name_0,
         "title" => $lang->sidemenu_title_0,
         "description" => $lang->sidemenu_description_0,
         "disporder" => "1",
-        "isdefault" => "no",
+        "isdefault" => "0",
     );
     $db->insert_query("settinggroups", $sidemenu_group);
     
     $gid = $db->insert_id();
     $sidemenu_setting_1 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_1,
         "title" => $lang->sidemenu_title_1,
         "description" => $lang->sidemenu_description_1,
@@ -76,7 +83,7 @@ function sidemenu_activate()
     );
 	$gid = $db->insert_id();
     $sidemenu_setting_2 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_2,
         "title" => $lang->sidemenu_title_2,
         "description" => $lang->sidemenu_description_2,
@@ -87,7 +94,7 @@ function sidemenu_activate()
     );
 		$gid = $db->insert_id();
     $sidemenu_setting_3 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_3,
         "title" => $lang->sidemenu_title_3,
         "description" => $lang->sidemenu_description_3,
@@ -98,7 +105,7 @@ function sidemenu_activate()
     );
 		$gid = $db->insert_id();
     $sidemenu_setting_4 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_4,
         "title" => $lang->sidemenu_title_4,
         "description" => $lang->sidemenu_description_4,
@@ -109,7 +116,7 @@ function sidemenu_activate()
     );
 		$gid = $db->insert_id();
     $sidemenu_setting_5 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_5,
         "title" => $lang->sidemenu_title_5,
         "description" => $lang->sidemenu_description_5,
@@ -120,7 +127,7 @@ function sidemenu_activate()
     );
 		$gid = $db->insert_id();
     $sidemenu_setting_6 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_6,
         "title" => $lang->sidemenu_title_6,
         "description" => $lang->sidemenu_description_6,
@@ -130,7 +137,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_7 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_7,
         "title" => $lang->sidemenu_title_7,
         "description" => $lang->sidemenu_description_7,
@@ -140,7 +147,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_8 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_8,
         "title" => $lang->sidemenu_title_8,
         "description" => $lang->sidemenu_description_8,
@@ -150,7 +157,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_9 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_9,
         "title" => $lang->sidemenu_title_9,
         "description" => $lang->sidemenu_description_9,
@@ -160,7 +167,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_10 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_10,
         "title" => $lang->sidemenu_title_10,
         "description" => $lang->sidemenu_description_10,
@@ -170,7 +177,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_11 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_11,
         "title" => $lang->sidemenu_title_11,
         "description" => $lang->sidemenu_description_11,
@@ -180,7 +187,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_12 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_12,
         "title" => $lang->sidemenu_title_12,
         "description" => $lang->sidemenu_description_12,
@@ -190,7 +197,7 @@ function sidemenu_activate()
         "gid"            => intval($gid),
     );
 	$sidemenu_setting_13 = array(
-        "sid"            => "NULL",
+        "sid"            => "0",
         "name" => $lang->sidemenu_name_13,
         "title" => $lang->sidemenu_title_13,
         "description" => $lang->sidemenu_description_13,
